@@ -2,10 +2,10 @@ import DetailClient from '@/app/components/detail/DetailClient';
 import React from 'react';
 import { products } from '@/utils/Products';
 
-export default function Page({ params }: { params: { productId: string } }) {
-  const { productId } = params;
+export default function Page(props: any) {
+  const { params } = props as { params: { productId: string } };
 
-  const product = products.find((product) => product.id === productId);
+  const product = products.find(product => product.id == params.productId);
 
   return (
     <div>
