@@ -8,7 +8,8 @@ type Props = {
   };
 };
 
-const Detail = ({ params }: Props) => {
+
+const Detail = async ({ params }: Props) => {
   const { productId } = params;
 
   const product = products.find(product => product.id == productId);
